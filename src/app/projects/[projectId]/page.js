@@ -3,6 +3,15 @@ import Link from 'next/link';
 import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb } from 'lucide-react';
 import { projectsData } from '../../../data/projects.js';
 import Projecet404 from '@/components/Projecet404.jsx';
+
+import { projects } from '@/data/projects';
+
+export function generateStaticParams() {
+    return projects.map((project) => ({
+        projectId: project.id,
+    }));
+}
+
 export default function ProjectDetail({ params }) {
     const { projectId } = use(params);
     console.log(projectId);
@@ -61,22 +70,22 @@ export default function ProjectDetail({ params }) {
 
                     {/* CTA Links */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
+                        <a
                             traget="_blank"
                             href={project.links.github}
                             className="flex-1 px-6 py-3 bg-background border border-border text-foreground font-semibold rounded-lg hover:border-primary/50 hover:bg-card transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
                         >
                             <Github className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                             View Code
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             traget="_blank"
                             href={project.links.live}
                             className="flex-1 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
                         >
                             <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                             Live Demo
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </section>

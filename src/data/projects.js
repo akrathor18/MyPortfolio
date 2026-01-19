@@ -1,3 +1,9 @@
+export const projects = [
+    { id: 'studyhub', title: 'StudyHub' },
+    { id: 'inventlab', title: 'InventLab' },
+    { id: 'shophub', title: 'ShopHub' },
+];
+
 export const projectsData = [
     {
         id: 'studyhub',
