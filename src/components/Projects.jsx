@@ -1,47 +1,8 @@
-'use client';
-
 import Link from 'next/link';
 import { Github, ExternalLink, Lightbulb, Zap } from 'lucide-react';
-
+import {projectsData} from '../data/projects';
 export default function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: 'StudyHub',
-      description: "A student-focused web platform for sharing notes and practicing MCQ-based quizzes for selected subjects",
-      problem: 'Students often struggle to find organized notes and self-assessment tools in one place.',
-      solution: 'Built a web application that allows students to access notes, take quizzes, and track learning activity in a simple interface.',
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Zustand', 'Tailwind CSS'],
-      links: {
-        github: '#',
-        live: '#',
-      },
-    },
-    {
-      id: 2,
-      title: 'Inventory Management System',
-      description: 'A real-time inventory management system built during a hackathon to track stock, sales, and inventory logs.',
-      problem: 'Small businesses lack simple tools to track inventory and monitor stock changes in real time.',
-      solution: 'Developed a system with role-based access, inventory updates,logs, dashboards, and low-stock alerts.',
-      technologies: ['Next.js', 'Node.js', 'Tailwind CSS', 'Zustand', 'Prisma'],
-      links: {
-        github: '#',
-        live: '#',
-      },
-    },
-    {
-      id: 3,
-      title: 'Frontend E-Commerce UI',
-      description: 'A modern e-commerce frontend application focused on product browsing,cart management, and a clean shopping experience.',
-      problem: 'Many beginner e-commerce projects lack realistic UI flows and proper state handling for cart and product interactions.',
-      solution: 'Built a responsive e-commerce frontend that includes product listings,category filtering, cart functionality, and a structured UI layout similar to real-world online stores.',
-      technologies: ['React.js', 'JavaScript', 'Tailwind CSS', 'React Router', 'Context API'],
-      links: {
-        github: '#',
-        live: '#',
-      },
-    },
-  ];
+  const projects = projectsData;
 
   return (
      <section id="projects" className="py-20 px-6 bg-background relative">

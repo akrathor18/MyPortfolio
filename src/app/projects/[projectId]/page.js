@@ -1,128 +1,13 @@
 import { use } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Github, ExternalLink, Code, Eye } from 'lucide-react';
-
-const projectsData = [
-    {
-        id: 1,
-        title: 'E-Commerce Platform',
-        description: 'Full-stack e-commerce solution with real-time inventory management and payment integration.',
-        problem: 'Traditional e-commerce solutions were too complex and expensive for small businesses.',
-        solution: 'Built a scalable, user-friendly platform with secure payment processing and admin dashboard.',
-        longDescription: 'This is a comprehensive e-commerce platform built with modern web technologies. It features a responsive design, real-time inventory tracking, secure payment processing with Stripe integration, and an intuitive admin dashboard for managing products, orders, and customers.',
-        features: [
-            'Product catalog with advanced filtering',
-            'Real-time inventory management',
-            'Secure payment processing (Stripe)',
-            'Admin dashboard with analytics',
-            'User authentication and profiles',
-            'Order tracking and notifications',
-            'Responsive design for all devices',
-            'Search and recommendation engine',
-        ],
-        technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-        links: {
-            github: '#',
-            live: '#',
-        },
-        stats: {
-            duration: '3 months',
-            teamSize: 'Solo',
-            status: 'Live',
-        },
-    },
-    {
-        id: 2,
-        title: 'Task Management App',
-        description: 'Collaborative task management tool with real-time updates and team collaboration features.',
-        problem: 'Teams needed a simple way to manage projects without complex setup and learning curves.',
-        solution: 'Created an intuitive app with drag-and-drop, real-time sync, and team workspace features.',
-        longDescription: 'A modern task management application designed for teams to collaborate efficiently. Features real-time updates using WebSockets, drag-and-drop interface for kanban boards, and comprehensive project management tools.',
-        features: [
-            'Kanban board with drag-and-drop',
-            'Real-time collaboration',
-            'Team workspaces',
-            'Task assignments and deadlines',
-            'Activity tracking and notifications',
-            'File attachments support',
-            'Comments and discussions',
-            'Project templates',
-        ],
-        technologies: ['React', 'Firebase', 'Tailwind CSS', 'Redux'],
-        links: {
-            github: '#',
-            live: '#',
-        },
-        stats: {
-            duration: '2 months',
-            teamSize: 'Solo',
-            status: 'Live',
-        },
-    },
-    {
-        id: 3,
-        title: 'Analytics Dashboard',
-        description: 'Real-time analytics dashboard with data visualization and custom reporting tools.',
-        problem: 'Companies struggled to visualize and understand their data metrics effectively.',
-        solution: 'Developed an interactive dashboard with advanced charts, filters, and export capabilities.',
-        longDescription: 'An advanced analytics dashboard that transforms raw data into actionable insights. With interactive charts, custom filters, and real-time data updates, it helps businesses make data-driven decisions.',
-        features: [
-            'Interactive data visualization',
-            'Real-time metrics and KPIs',
-            'Custom report generation',
-            'Data filtering and drilling',
-            'Export to PDF/CSV',
-            'User behavior tracking',
-            'Trend analysis',
-            'Performance benchmarking',
-        ],
-        technologies: ['Next.js', 'PostgreSQL', 'D3.js', 'Recharts'],
-        links: {
-            github: '#',
-            live: '#',
-        },
-        stats: {
-            duration: '4 months',
-            teamSize: '3 members',
-            status: 'In Development',
-        },
-    },
-    {
-        id: 4,
-        title: 'Social Media Feed',
-        description: 'Social media platform with real-time notifications, messaging, and user interactions.',
-        problem: 'Existing solutions lacked seamless real-time communication and engaging UI.',
-        solution: 'Built a full-featured social platform with WebSocket integration and modern design.',
-        longDescription: 'A complete social media platform with real-time features, messaging capabilities, and an engaging user interface. Built with the MERN stack for scalability and performance.',
-        features: [
-            'Real-time feed updates',
-            'User authentication and profiles',
-            'Post creation and editing',
-            'Like, comment, and share functionality',
-            'Direct messaging',
-            'Notifications system',
-            'User discovery and recommendations',
-            'Media upload support',
-        ],
-        technologies: ['MERN Stack', 'WebSocket', 'Tailwind CSS', 'JWT Auth'],
-        links: {
-            github: '#',
-            live: '#',
-        },
-        stats: {
-            duration: '5 months',
-            teamSize: '2 members',
-            status: 'Completed',
-        },
-    },
-];
-
+import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb } from 'lucide-react';
+import { projectsData } from '../../../data/projects.js';
 export default function ProjectDetail({ params }) {
     const { projectId } = use(params);
-  console.log(projectId);
-   const project = projectsData.find(
-    (p) => p.id === Number(projectId)
-  );
+    console.log(projectId);
+    const project = projectsData.find(
+        (p) => p.id === projectId
+    );
     if (!project) {
         return (
             <div className="min-h-screen bg-background flex items-center justify-center px-6">
@@ -274,6 +159,63 @@ export default function ProjectDetail({ params }) {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            {/* Challenges & Learnings Section */}
+            <section className="py-12 md:py-20 px-6 border-t border-border relative">
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Challenges & Learnings</h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Challenges */}
+                        <div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <AlertCircle className="w-6 h-6 text-primary" />
+                                <h3 className="text-2xl font-bold text-foreground">Challenges Faced</h3>
+                            </div>
+                            <ul className="space-y-4">
+                                {project.challenges.map((challenge, index) => (
+                                    <li
+                                        key={index}
+                                        className="flex gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group"
+                                    >
+                                        <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm group-hover:bg-primary/40 transition-colors duration-300">
+                                            {index + 1}
+                                        </span>
+                                        <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                                            {challenge}
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Learnings */}
+                        <div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <Lightbulb className="w-6 h-6 text-primary" />
+                                <h3 className="text-2xl font-bold text-foreground">Key Learnings</h3>
+                            </div>
+                            <ul className="space-y-4">
+                                {project.learnings.map((learning, index) => (
+                                    <li
+                                        key={index}
+                                        className="flex gap-4 p-4 bg-card border border-primary/20 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
+                                    >
+                                        <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm group-hover:bg-primary/40 transition-colors duration-300 group-hover:scale-125 transition-transform duration-300">
+                                            ✓
+                                        </span>
+                                        <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                                            {learning}
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
             </section>
 
             {/* Bottom CTA */}
