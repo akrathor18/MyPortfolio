@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ChevronDown, Code2, ArrowRight } from 'lucide-react';
+import { ChevronDown, Code2, ArrowRight,Download } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -12,11 +12,12 @@ export default function Hero() {
           <Code2 className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
           <span>Welcome to my portfolio</span>
         </div>
-
+        <br/>
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
           Hi, I'm <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Ashish Kumar</span>
         </h1>
+    <span className='mb-6 inline-flex items-center gap-2 px-3 py-1.5 text-sm border border-border text-foreground font-semibold rounded-lg hover:bg-card transition-all duration-300 hover:border-primary/50 hover:scale-105'>Learn • Build • Improve</span>
 
         {/* Subheading with Role */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium">
@@ -43,6 +44,14 @@ export default function Hero() {
           >
             Get In Touch
           </Link>
+          <a
+            href="https://raw.githubusercontent.com/akrathor18/Resume/f96813dd6fd72b9c34c8f3abaf3b105e4848211a/Ashish%20Kumar%20Resume.pdf"
+            download="Ashish Resume.pdf"
+            className="group px-8 py-3 bg-primary/10 border border-primary/30 text-primary font-semibold rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2 shadow-lg hover:shadow-xl"
+          >
+            <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+            Download Resume
+          </a>
         </div>
 
         {/* Scroll Indicator */}

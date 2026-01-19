@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,7 @@ export default function Navigation() {
   const navLinks = [
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Journey', href: '#journey' },
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -22,11 +23,11 @@ export default function Navigation() {
           href="/"
           className="text-xl font-bold text-foreground hover:text-primary hover:scale-110 transition-all duration-300"
         >
-          {'< Dev />'}
+          {'< Ashish />'}
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-8 items-center">
           {navLinks.map((link, i) => (
             <Link
               key={i}
@@ -37,6 +38,14 @@ export default function Navigation() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
+          <a
+            href="https://raw.githubusercontent.com/akrathor18/Resume/f96813dd6fd72b9c34c8f3abaf3b105e4848211a/Ashish%20Kumar%20Resume.pdf"
+            download="Ashish Resume.pdf"
+            className="text-sm font-semibold px-4 py-2 bg-primary/10 border border-primary/30 text-primary rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
+          >
+            <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+            Resume
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -67,6 +76,14 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="https://raw.githubusercontent.com/akrathor18/Resume/f96813dd6fd72b9c34c8f3abaf3b105e4848211a/Ashish%20Kumar%20Resume.pdf"
+              download="Ashish Resume.pdf"
+              className="block text-sm font-semibold px-4 py-2 bg-primary/10 border border-primary/30 text-primary rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 text-center flex items-center justify-center gap-2 group mt-4"
+            >
+              <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+              Download Resume
+            </a>
           </div>
         </div>
       )}

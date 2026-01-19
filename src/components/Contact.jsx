@@ -8,7 +8,7 @@ export default function Contact() {
     {
       label: 'Email',
       value: 'ashishk.codes@gmail.com',
-      href: 'mailto:ashishk.codes@gmail.com',
+      href: 'https://mail.google.com/mail/?view=cm&to=ashishk.codes@gmail.com',
       icon: Mail,
     },
     {
@@ -48,22 +48,23 @@ export default function Contact() {
         </div>
 
         {/* Contact Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
           {contactLinks.map((contact, index) => {
             const IconComponent = contact.icon;
             return (
               <Link
                 key={index}
+                target='_blank'
                 href={contact.href}
                 className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group hover:shadow-lg hover:scale-105 transform"
               >
                 <div className="flex items-start gap-4">
                   <IconComponent className="w-6 h-6 text-primary flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
                   <div className="flex-1">
-                    <p className="text-sm text-muted-foreground mb-1">
+                    <p className="text-sm sm:text-lg text-muted-foreground mb-1">
                       {contact.label}
                     </p>
-                    <p className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                    <p className="text- font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                       {contact.value}
                     </p>
                   </div>
@@ -81,13 +82,14 @@ export default function Contact() {
           <p className="text-muted-foreground mb-4">
             Interested in working together? I'm always open to discussing new projects.
           </p>
-          <Link
-            href="mailto:your.email@example.com"
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=ashishk.codes@gmail.com"
+            target="_blank"
             className=" flex items-center gap-2 justify-center w-fit px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95 "
           >
           <Send className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
             Send me an Email
-          </Link>
+          </a>
         </div>
       </div>
 

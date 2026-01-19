@@ -13,10 +13,11 @@ export default function Footer() {
               href="/"
               className="text-xl font-bold text-foreground hover:text-primary transition-colors block mb-2"
             >
-              {'< Dev />'}
+              {'< Ashish />'}
             </Link>
             <p className="text-sm text-muted-foreground">
-              Full Stack Developer passionate about building amazing web experiences.
+              Developer focused on building practical,
+real-world web applications using modern technologies.
             </p>
           </div>
 

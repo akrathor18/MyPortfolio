@@ -2,6 +2,7 @@ import { use } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb } from 'lucide-react';
 import { projectsData } from '../../../data/projects.js';
+import Projecet404 from '@/components/Projecet404.jsx';
 export default function ProjectDetail({ params }) {
     const { projectId } = use(params);
     console.log(projectId);
@@ -10,18 +11,7 @@ export default function ProjectDetail({ params }) {
     );
     if (!project) {
         return (
-            <div className="min-h-screen bg-background flex items-center justify-center px-6">
-                <div className="text-center">
-                    <h1 className="text-4xl font-bold text-foreground mb-4">Project Not Found</h1>
-                    <Link
-                        href="/#projects"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300"
-                    >
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Projects
-                    </Link>
-                </div>
-            </div>
+            <Projecet404 />
         );
     }
 
@@ -72,6 +62,7 @@ export default function ProjectDetail({ params }) {
                     {/* CTA Links */}
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link
+                            traget="_blank"
                             href={project.links.github}
                             className="flex-1 px-6 py-3 bg-background border border-border text-foreground font-semibold rounded-lg hover:border-primary/50 hover:bg-card transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
                         >
@@ -79,6 +70,7 @@ export default function ProjectDetail({ params }) {
                             View Code
                         </Link>
                         <Link
+                            traget="_blank"
                             href={project.links.live}
                             className="flex-1 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
                         >
