@@ -44,7 +44,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6 bg-background relative">
+     <section id="projects" className="py-20 px-6 bg-background relative">
       {/* Section Separator Top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
       
@@ -124,18 +124,18 @@ export default function Projects() {
               {/* Links */}
               <div className="flex gap-3">
                 <Link
-                  href={project.links.github}
+                  href={`/projects/${project.id}`}
                   className="flex-1 px-4 py-2 text-center text-sm font-semibold text-foreground bg-background border border-border rounded hover:bg-card hover:border-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group/link"
+                >
+                  <Zap className="w-4 h-4 group-hover/link:rotate-12 transition-transform duration-300" />
+                  Details
+                </Link>
+                <Link
+                  href={project.links.github}
+                  className="flex-1 px-4 py-2 text-center text-sm font-semibold text-primary bg-primary/10 border border-primary/30 rounded hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group/link"
                 >
                   <Github className="w-4 h-4 group-hover/link:rotate-12 transition-transform duration-300" />
                   GitHub
-                </Link>
-                <Link
-                  href={project.links.live}
-                  className="flex-1 px-4 py-2 text-center text-sm font-semibold text-primary bg-primary/10 border border-primary/30 rounded hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group/link"
-                >
-                  <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
-                  View Live
                 </Link>
               </div>
             </div>

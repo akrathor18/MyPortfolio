@@ -25,12 +25,12 @@ export default function About() {
             <h3 className="text-2xl font-bold text-foreground mb-4">Who I Am</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I'm a passionate full-stack developer working with the MERN stack and Next.js.
-I build web applications that are fast, scalable, and user-focused.
+              I build web applications that are fast, scalable, and user-focused.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-             With a strong foundation in both frontend and backend technologies,
-I enjoy bridging the gap between design and functionality to create
-clean, practical digital experiences.
+              With a strong foundation in both frontend and backend technologies,
+              I enjoy bridging the gap between design and functionality to create
+              clean, practical digital experiences.
             </p>
           </div>
 

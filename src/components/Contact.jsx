@@ -19,7 +19,7 @@ export default function Contact() {
     },
     {
       label: 'LinkedIn',
-      value: 'linkedin.com/in/ashishkumartech',
+      value: '/in/ashishkumartech',
       href: 'https://www.linkedin.com/in/ashishkumartech',
       icon: Linkedin,
     },

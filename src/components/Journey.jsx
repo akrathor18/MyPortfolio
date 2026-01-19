@@ -65,7 +65,7 @@ export default function Journey() {
         </div>
 
         {/* Journey Timeline */}
-        <div className="relative">
+        <div className="hidden sm:inline relative">
           {/* Vertical Line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 md:translate-x--1"></div>
 
@@ -101,6 +101,51 @@ export default function Journey() {
                         </h3>
                       </div>
                       <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="sm:hidden inline relative">
+          {/* Vertical Line */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 transform md:-translate-x-1/2"></div>
+
+          {/* Timeline Items */}
+          <div className="space-y-8 md:space-y-12">
+            {journeySteps.map((step, index) => {
+              const IconComponent = step.icon;
+              const isEven = index % 2 === 0;
+
+              return (
+                <div
+                  key={step.id}
+                  className="flex gap-4 md:gap-8 relative"
+                >
+                  {/* Timeline Dot */}
+                  <div className="flex flex-shrink-0">
+                    <div className="relative z-10 flex items-center justify-center">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-primary rounded-full flex items-center justify-center group hover:scale-125 hover:shadow-lg transition-all duration-300 cursor-default transform">
+                        <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-primary group-hover:rotate-12 transition-transform duration-300" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Content Card */}
+                  <div className="flex-1 flex items-center pb-4 md:pb-0">
+                    <div className="w-full bg-card border border-border rounded-lg p-4 md:p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group hover:shadow-lg hover:scale-105 transform">
+                      <div className="flex items-start gap-2 md:gap-3 mb-2 md:mb-3">
+                        <span className="text-xs md:text-sm font-mono text-primary font-bold flex-shrink-0">
+                          {String(step.id).padStart(2, '0')}
+                        </span>
+                        <h3 className="text-base md:text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                          {step.title}
+                        </h3>
+                      </div>
+                      <p className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300 leading-relaxed">
                         {step.description}
                       </p>
                     </div>

@@ -20,7 +20,8 @@ export default function Hero() {
 
         {/* Subheading with Role */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium">
-          Full Stack Web Developer | MERN & Next.js Specialist
+          Full Stack Web Developer | Building with MERN & Next.js
+t
         </p>
 
         {/* Description */}
