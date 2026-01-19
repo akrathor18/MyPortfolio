@@ -47,7 +47,7 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Connect</h4>
             <div className="flex gap-4 text-muted-foreground">
               <Link
-                href="https://github.com"
+                href="https://github.com/akrathor18"
                 className="hover:text-primary transition-colors"
                 aria-label="GitHub"
               >
@@ -56,7 +56,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/ashishkumartech"
                 className="hover:text-primary transition-colors"
                 aria-label="LinkedIn"
               >
@@ -80,7 +80,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-border pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} Ashish Kumar. All rights reserved.
           </p>
         </div>
       </div>

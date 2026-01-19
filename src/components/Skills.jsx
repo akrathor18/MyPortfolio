@@ -7,26 +7,27 @@ export default function Skills() {
     {
       category: 'Frontend',
       icon: Code,
-      skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'JavaScript'],
+      skills: ['React', 'Next.js', , 'Tailwind CSS', 'JavaScript'],
     },
+   
     {
       category: 'Backend',
       icon: Server,
-      skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs'],
+      skills: ['Node.js', 'Express', , 'REST APIs'],
     },
     {
       category: 'Database',
       icon: Database,
-      skills: ['MongoDB', 'PostgreSQL', 'Firebase', 'Mongoose', 'Prisma'],
+      skills: ['MongoDB', 'MySQL', 'Mongoose', ],
     },
     {
       category: 'Tools',
       icon: Wrench,
-      skills: ['Git', 'GitHub', 'VS Code', 'Figma', 'Docker'],
+      skills: ['Git', 'GitHub', 'VS Code', "Postman"],
     },
   ];
 
-  const languages = ['English', 'Hindi', 'Spanish'];
+  const languages = ['English', 'Hindi', 'Panjabi'];
 
   return (
     <section className="py-20 px-6 bg-background relative">

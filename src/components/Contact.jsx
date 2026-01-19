@@ -7,26 +7,26 @@ export default function Contact() {
   const contactLinks = [
     {
       label: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      value: 'ashishk.codes@gmail.com',
+      href: 'mailto:ashishk.codes@gmail.com',
       icon: Mail,
     },
     {
       label: 'GitHub',
-      value: 'github.com/yourprofile',
-      href: 'https://github.com',
+      value: 'github.com/akrathor18',
+      href: 'https://github.com/akrathor18',
       icon: Github,
     },
     {
       label: 'LinkedIn',
-      value: 'linkedin.com/in/yourprofile',
-      href: 'https://linkedin.com',
+      value: 'linkedin.com/in/ashishkumartech',
+      href: 'https://www.linkedin.com/in/ashishkumartech',
       icon: Linkedin,
     },
     {
       label: 'Twitter',
-      value: '@yourhandle',
-      href: 'https://twitter.com',
+      value: '@iam_ashish_dev',
+      href: 'https://x.com/iam_ashish_dev',
       icon: Twitter,
     },
   ];
@@ -77,22 +77,22 @@ export default function Contact() {
         </div>
 
         {/* Direct Message */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30 rounded-lg p-8 text-center hover:border-primary/50 hover:bg-gradient-to-r hover:from-primary/15 hover:to-primary/10 transition-all duration-300 hover:shadow-lg">
+        <div className="flex flex-col justify-center items-center bg-linear-to-r from-primary/10 to-primary/5 border border-primary/30 rounded-lg p-8 text-center hover:border-primary/50 hover:bg-linear-to-r hover:from-primary/15 hover:to-primary/10 transition-all duration-300 hover:shadow-lg">
           <p className="text-muted-foreground mb-4">
             Interested in working together? I'm always open to discussing new projects.
           </p>
           <Link
             href="mailto:your.email@example.com"
-            className="inline-block px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95 group/btn flex items-center gap-2"
+            className=" flex items-center gap-2 justify-center w-fit px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95 "
           >
+          <Send className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
             Send me an Email
-            <Send className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
           </Link>
         </div>
       </div>
 
       {/* Section Separator Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/20 to-transparent"></div>
     </section>
   );
 }

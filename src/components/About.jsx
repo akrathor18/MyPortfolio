@@ -6,8 +6,8 @@ export default function About() {
   return (
     <section id="about" className="py-20 px-6 bg-background relative">
       {/* Section Separator Top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-      
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/20 to-transparent"></div>
+
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -24,12 +24,13 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-bold text-foreground mb-4">Who I Am</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm a passionate full-stack developer with expertise in MERN stack and Next.js. 
-              I create web applications that are fast, scalable, and user-focused.
+              I'm a passionate full-stack developer working with the MERN stack and Next.js.
+I build web applications that are fast, scalable, and user-focused.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              With a strong foundation in both frontend and backend technologies, I bridge the gap 
-              between design and functionality to deliver exceptional digital experiences.
+             With a strong foundation in both frontend and backend technologies,
+I enjoy bridging the gap between design and functionality to create
+clean, practical digital experiences.
             </p>
           </div>
 
@@ -40,7 +41,9 @@ export default function About() {
                 Problem Solver
               </h4>
               <p className="text-muted-foreground text-sm group-hover:text-foreground transition-colors duration-300">
-                I approach challenges with logical thinking and creative solutions to deliver results.
+                I enjoy breaking down problems and finding logical,
+                practical solutions through code.
+
               </p>
             </div>
 
@@ -50,7 +53,9 @@ export default function About() {
                 Continuous Learner
               </h4>
               <p className="text-muted-foreground text-sm group-hover:text-foreground transition-colors duration-300">
-                Always staying updated with latest technologies and best practices in web development.
+                I actively improve my skills by building projects
+                and exploring modern technologies.
+
               </p>
             </div>
 
@@ -60,7 +65,9 @@ export default function About() {
                 Collaborative
               </h4>
               <p className="text-muted-foreground text-sm group-hover:text-foreground transition-colors duration-300">
-                I work effectively in teams and communicate ideas clearly with stakeholders.
+                I’m comfortable working in teams, discussing ideas,
+                and learning from feedback.
+
               </p>
             </div>
           </div>

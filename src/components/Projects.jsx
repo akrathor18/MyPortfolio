@@ -7,11 +7,11 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with real-time inventory management and payment integration.',
-      problem: 'Traditional e-commerce solutions were too complex and expensive for small businesses.',
-      solution: 'Built a scalable, user-friendly platform with secure payment processing and admin dashboard.',
-      technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+      title: 'StudyHub',
+      description: "A student-focused web platform for sharing notes and practicing MCQ-based quizzes for selected subjects",
+      problem: 'Students often struggle to find organized notes and self-assessment tools in one place.',
+      solution: 'Built a web application that allows students to access notes, take quizzes, and track learning activity in a simple interface.',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Zustand', 'Tailwind CSS'],
       links: {
         github: '#',
         live: '#',
@@ -19,11 +19,11 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates and team collaboration features.',
-      problem: 'Teams needed a simple way to manage projects without complex setup and learning curves.',
-      solution: 'Created an intuitive app with drag-and-drop, real-time sync, and team workspace features.',
-      technologies: ['React', 'Firebase', 'Tailwind CSS', 'Redux'],
+      title: 'Inventory Management System',
+      description: 'A real-time inventory management system built during a hackathon to track stock, sales, and inventory logs.',
+      problem: 'Small businesses lack simple tools to track inventory and monitor stock changes in real time.',
+      solution: 'Developed a system with role-based access, inventory updates,logs, dashboards, and low-stock alerts.',
+      technologies: ['Next.js', 'Node.js', 'Tailwind CSS', 'Zustand', 'Prisma'],
       links: {
         github: '#',
         live: '#',
@@ -31,23 +31,11 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: 'Analytics Dashboard',
-      description: 'Real-time analytics dashboard with data visualization and custom reporting tools.',
-      problem: 'Companies struggled to visualize and understand their data metrics effectively.',
-      solution: 'Developed an interactive dashboard with advanced charts, filters, and export capabilities.',
-      technologies: ['Next.js', 'PostgreSQL', 'D3.js', 'Recharts'],
-      links: {
-        github: '#',
-        live: '#',
-      },
-    },
-    {
-      id: 4,
-      title: 'Social Media Feed',
-      description: 'Social media platform with real-time notifications, messaging, and user interactions.',
-      problem: 'Existing solutions lacked seamless real-time communication and engaging UI.',
-      solution: 'Built a full-featured social platform with WebSocket integration and modern design.',
-      technologies: ['MERN Stack', 'WebSocket', 'Tailwind CSS', 'JWT Auth'],
+      title: 'Frontend E-Commerce UI',
+      description: 'A modern e-commerce frontend application focused on product browsing,cart management, and a clean shopping experience.',
+      problem: 'Many beginner e-commerce projects lack realistic UI flows and proper state handling for cart and product interactions.',
+      solution: 'Built a responsive e-commerce frontend that includes product listings,category filtering, cart functionality, and a structured UI layout similar to real-world online stores.',
+      technologies: ['React.js', 'JavaScript', 'Tailwind CSS', 'React Router', 'Context API'],
       links: {
         github: '#',
         live: '#',

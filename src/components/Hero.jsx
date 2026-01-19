@@ -5,7 +5,7 @@ import { ChevronDown, Code2, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-background relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-4 py-10 bg-background relative overflow-hidden">
       <div className="max-w-3xl mx-auto text-center">
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 group cursor-default">
@@ -15,7 +15,7 @@ export default function Hero() {
 
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-          Hi, I'm <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Your Name</span>
+          Hi, I'm <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Ashish Kumar</span>
         </h1>
 
         {/* Subheading with Role */}
