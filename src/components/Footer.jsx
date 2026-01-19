@@ -17,7 +17,7 @@ export default function Footer() {
             </Link>
             <p className="text-sm text-muted-foreground">
               Developer focused on building practical,
-real-world web applications using modern technologies.
+              real-world web applications using modern technologies.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ real-world web applications using modern technologies.
                 </svg>
               </Link>
               <Link
-                href="https://twitter.com"
+                href="https://x.com/iam_ashish_dev"
                 className="hover:text-primary transition-colors"
                 aria-label="Twitter"
               >
