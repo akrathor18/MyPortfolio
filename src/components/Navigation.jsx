@@ -23,7 +23,7 @@ export default function Navigation() {
           href="/"
           className="text-xl font-bold text-foreground hover:text-primary hover:scale-110 transition-all duration-300"
         >
-          {'< Ashish kumar/>'}
+          {'< Ashish />'}
         </Link>
 
         {/* Desktop Navigation */}

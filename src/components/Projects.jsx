@@ -94,7 +94,7 @@ export default function Projects() {
                 <Link
                   target="_blank"
                   href={project.links.live}
-                  className="flex-1 px-3 sm:px-6 sm:py-3 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
+                  className="flex-1 px-3 sm:px-6 sm:py-3 py-2 bg-primary/10 border border-primary/30 text-primary rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 text-center hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
                 >
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   Live Demo
