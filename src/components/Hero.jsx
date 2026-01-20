@@ -45,7 +45,7 @@ export default function Hero() {
             Get In Touch
           </Link>
           <a
-            href="https://raw.githubusercontent.com/akrathor18/Resume/f96813dd6fd72b9c34c8f3abaf3b105e4848211a/Ashish%20Kumar%20Resume.pdf"
+            href="https://raw.githubusercontent.com/akrathor18/Resume/main/Ashish%20Kumar%20Resume.pdf"
             download="Ashish Resume.pdf"
             className="group px-8 py-3 bg-primary/10 border border-primary/30 text-primary font-semibold rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2 shadow-lg hover:shadow-xl"
           >

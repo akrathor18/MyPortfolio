@@ -39,7 +39,7 @@ export default function Navigation() {
             </Link>
           ))}
           <a
-            href="https://raw.githubusercontent.com/akrathor18/Resume/f96813dd6fd72b9c34c8f3abaf3b105e4848211a/Ashish%20Kumar%20Resume.pdf"
+            href="https://raw.githubusercontent.com/akrathor18/Resume/main/Ashish%20Kumar%20Resume.pdf"
             download="Ashish Resume.pdf"
             className="text-sm font-semibold px-4 py-2 bg-primary/10 border border-primary/30 text-primary rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
           >
