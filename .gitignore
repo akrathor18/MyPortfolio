@@ -10,6 +10,11 @@
 !.yarn/releases
 !.yarn/versions
 
+# Firebase local state
+.firebase/
+firebase-debug.log
+
+
 # testing
 /coverage
 
