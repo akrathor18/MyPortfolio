@@ -36,6 +36,17 @@ export const projectsData = [
             'Gained experience building real-world features instead of demo apps',
             'Understood the importance of UI clarity and usability for students',
         ],
+        role: 'Full Stack Developer',
+        roleDescription: 'Built StudyHub as a solo full-stack project from idea to implementation. Worked on frontend UI development, backend API integration, database design, and core features like notes and quizzes. Focused on building a functional, scalable learning platform while improving real-world full-stack development skills.',
+        responsibilities: [
+            'Designed and developed the frontend using React and Tailwind CSS',
+            'Implemented responsive layouts for notes, quizzes, and dashboards',
+            'Built and integrated RESTful APIs for core application features',
+            'Implemented quiz functionality including MCQs, scoring, and attempts',
+            'Managed application state and handled client-side validation',
+            'Deployed the application and handled basic performance optimizations',
+        ],
+
         technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
         links: {
             github: 'https://github.com/akrathor18/Note-sharing-app',
@@ -78,6 +89,17 @@ export const projectsData = [
             'Gained experience working in a team-based development environment',
             'Understood the importance of clear task division during hackathons',
         ],
+        role: 'Full Stack Developer',
+        roleDescription: 'Built InventLab as a full-stack inventory management system to track products, stock movements, and sales. Worked on designing the backend APIs, database schema, and frontend dashboards. Focused on building a reliable system with clear inventory logs, role-based actions, and real-time insights.',
+        responsibilities: [
+            'Designed database schema for products, stock, sales, and inventory logs',
+            'Built RESTful APIs using Node.js and Express for inventory operations',
+            'Implemented stock actions such as sales, returns, and restocking',
+            'Developed dashboard UI for inventory tracking and activity logs',
+            'Added role-based access logic for admin and staff users',
+            'Handled data validation and error handling across the application',
+        ],
+
         technologies: ['Next.js', 'Node.js', 'Express', 'SQLite', 'Tailwind CSS'],
         links: {
             github: 'https://github.com/Kashina69/InventLabs/',
@@ -121,6 +143,18 @@ export const projectsData = [
             'Learned to design realistic UI flows for e-commerce applications',
             'Gained confidence building larger frontend-only projects',
         ],
+        role: 'Frontend Developer',
+        roleDescription:
+            'Developed ShopHub as a solo frontend-focused e-commerce project to practice building realistic shopping interfaces. Worked on UI design, component architecture, and client-side state management to simulate real-world product browsing and cart interactions.',
+        responsibilities: [
+            'Designed and implemented the complete frontend UI using React and Tailwind CSS',
+            'Built product listing and category-based filtering functionality',
+            'Implemented shopping cart logic with client-side state management',
+            'Created reusable and modular UI components for scalability',
+            'Handled dynamic UI updates based on user interactions',
+            'Ensured responsive design across mobile and desktop devices',
+        ],
+
         technologies: ['React', 'JavaScript', 'Tailwind CSS'],
         links: {
             github: 'https://github.com/akrathor18/ShopHub',
