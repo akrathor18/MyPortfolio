@@ -1,12 +1,28 @@
 'use client';
 
 import Link from 'next/link';
-import { ChevronDown, Code2, ArrowRight,Download } from 'lucide-react';
+import { ChevronDown, Code2, ArrowRight, Download } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-10 bg-background relative overflow-hidden">
-      <div className="max-w-3xl mx-auto text-center">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-background relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Floating Code Symbols */}
+        <div className="absolute top-10 left-10 w-20 h-20 border-2 border-primary/10 rounded-lg rotate-12 animate-pulse"></div>
+        <div className="absolute top-1/4 right-20 w-16 h-16 border-2 border-primary/20 rounded-full animate-bounce" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute bottom-1/4 left-1/4 w-24 h-24 border-2 border-primary/10 rounded-lg -rotate-12 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-10 right-10 w-20 h-20 border-2 border-primary/20 rounded-full animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}></div>
+        
+        {/* Gradient orbs */}
+        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-primary/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Animated lines */}
+        <div className="absolute top-0 left-1/2 w-px h-1/2 bg-gradient-to-b from-primary/20 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/3 w-px h-1/2 bg-gradient-to-t from-primary/20 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+      <div className="max-w-3xl mx-auto text-center relative z-10">
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 group cursor-default">
           <Code2 className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />

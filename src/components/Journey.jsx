@@ -158,7 +158,7 @@ export default function Journey() {
 
         {/* Journey Summary */}
         <div className="mt-16 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30 rounded-lg p-8 hover:border-primary/50 hover:bg-gradient-to-r hover:from-primary/15 hover:to-primary/10 transition-all duration-300 hover:shadow-lg text-center">
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             My journey has been shaped by curiosity, persistence, and a commitment to building projects that solve real problems. Every step—from learning HTML to building full-stack applications—has been crucial in becoming the developer I am today.
           </p>
         </div>

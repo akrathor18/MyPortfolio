@@ -1,7 +1,7 @@
 import { use } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb, UserCheck, CheckCircle2 } from 'lucide-react';
 import { projectsData } from '../../../data/projects.js';
+import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb, UserCheck, CheckCircle2, Heart } from 'lucide-react';
 import Projecet404 from '@/components/Projecet404.jsx';
 
 import { projects } from '@/data/projects';
@@ -89,7 +89,6 @@ export default function ProjectDetail({ params }) {
                     </div>
                 </div>
             </section>
-
             {/* Project Details */}
             <section className="py-12 md:py-20 px-6">
                 <div className="max-w-4xl mx-auto">
@@ -161,71 +160,88 @@ export default function ProjectDetail({ params }) {
                     </div>
                 </div>
             </section>
-           {/* My Role Section */}
+            {/* Why I Built This Section */}
+            <section className="py-12 md:py-20 px-6 border-t border-border relative bg-primary/5">
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+                <div className="max-w-4xl mx-auto">
+                    <div className="flex items-center gap-3 mb-8">
+                        <Heart className="w-8 h-8 text-primary" />
+                        <h2 className="text-3xl font-bold text-foreground">Why I Built This</h2>
+                    </div>
+
+                    <div className="bg-card border border-primary/20 rounded-lg sm:p-8 p-4 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
+                        <p className="text-base text-muted-foreground leading-relaxed">
+                            {project.whyBuilt}
+                        </p>
+                    </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            </section>
+            {/* My Role Section */}
             <section className="py-12 md:py-20 px-6 border-t border-border relative">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <UserCheck className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold text-foreground">My Role</h2>
-          </div>
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+                <div className="max-w-4xl mx-auto">
+                    <div className="flex items-center gap-3 mb-8">
+                        <UserCheck className="w-8 h-8 text-primary" />
+                        <h2 className="text-3xl font-bold text-foreground">My Role</h2>
+                    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Role Overview */}
-            <div className="bg-card border border-primary/20 rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
-              <div className="flex items-start gap-3 mb-4">
-                <UserCheck className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{project.role}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {project.roleDescription}
-                  </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        {/* Role Overview */}
+                        <div className="bg-card border border-primary/20 rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
+                            <div className="flex flex-col items-start gap-3 mb-4">
+                                <div className="flex items-center align-baseline gap-3">
+                                <UserCheck className="w-6 h-6 text-primary flex-shrink-0" />
+                                    <h3 className="text-xl font-bold text-foreground ">{project.role}</h3>
+                                </div>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        {project.roleDescription}
+                                    </p>
+                            </div>
+                        </div>
+
+                        {/* Quick Stats */}
+                        <div className="space-y-4">
+                            <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group">
+                                <p className="text-sm text-muted-foreground mb-2">Team Setup</p>
+                                <p className="text-xl font-bold text-primary group-hover:scale-110 transition-transform duration-300 inline-block">
+                                    {project.stats.teamSize}
+                                </p>
+                            </div>
+                            <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group">
+                                <p className="text-sm text-muted-foreground mb-2">Project Duration</p>
+                                <p className="text-xl font-bold text-primary group-hover:scale-110 transition-transform duration-300 inline-block">
+                                    {project.stats.duration}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Responsibilities */}
+                    <div>
+                        <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                            <CheckCircle2 className="w-6 h-6 text-primary" />
+                            Key Responsibilities
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {project.responsibilities.map((responsibility, index) => (
+                                <div
+                                    key={index}
+                                    className="flex gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group"
+                                >
+                                    <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm group-hover:bg-primary/40 group-hover:scale-125 transition-all duration-300">
+                                        ✓
+                                    </span>
+                                    <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                                        {responsibility}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="space-y-4">
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group">
-                <p className="text-sm text-muted-foreground mb-2">Team Setup</p>
-                <p className="text-xl font-bold text-primary group-hover:scale-110 transition-transform duration-300 inline-block">
-                  {project.stats.teamSize}
-                </p>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group">
-                <p className="text-sm text-muted-foreground mb-2">Project Duration</p>
-                <p className="text-xl font-bold text-primary group-hover:scale-110 transition-transform duration-300 inline-block">
-                  {project.stats.duration}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Responsibilities */}
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-              <CheckCircle2 className="w-6 h-6 text-primary" />
-              Key Responsibilities
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {project.responsibilities.map((responsibility, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 hover:bg-card/80 transition-all duration-300 group"
-                >
-                  <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary font-bold text-sm group-hover:bg-primary/40 group-hover:scale-125 transition-all duration-300">
-                    ✓
-                  </span>
-                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                    {responsibility}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-      </section>
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            </section>
             {/* Challenges & Learnings Section */}
             <section className="py-12 md:py-20 px-6 border-t border-border relative">
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>

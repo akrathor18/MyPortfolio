@@ -1,11 +1,30 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Download } from 'lucide-react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['about', 'skills', 'journey', 'projects', 'contact'];
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 150 && rect.bottom >= 150;
+        }
+        return false;
+      });
+      setActiveSection(current || '');
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { label: 'About', href: '/#about' },
@@ -28,16 +47,28 @@ export default function Navigation() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8 items-center">
-          {navLinks.map((link, i) => (
-            <Link
-              key={i}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary relative group transition-colors duration-300"
-            >
-              {link.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          ))}
+          {navLinks.map((link, i) => {
+            const sectionId = link.href.replace('/#', '');
+            const isActive = activeSection === sectionId;
+            return (
+              <Link
+                key={i}
+                href={link.href}
+                className={`text-sm font-medium relative group transition-colors duration-300 ${
+                  isActive
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-primary'
+                }`}
+              >
+                {link.label}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                ></span>
+              </Link>
+            );
+          })}
           <a
             href="https://raw.githubusercontent.com/akrathor18/Resume/main/Ashish%20Kumar%20Resume.pdf"
             download="Ashish Resume.pdf"

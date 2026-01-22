@@ -14,7 +14,8 @@ export const projectsData = [
             'Students often struggle to find organized study notes and reliable self-assessment tools in one place, especially for specific subjects.',
         solution:
             'Built a centralized platform where students can access subject-wise notes, take quizzes, and track their learning activity through a clean and simple interface.',
-        longDescription:
+        whyBuilt:"I built StudyHub after noticing how difficult it was for students to manage notes and self-assessment in one place. This project allowed me to apply full-stack concepts while solving a real problem faced by students.",
+            longDescription:
             'StudyHub is a web application designed to help students learn more effectively by combining note-sharing and quiz-based self-assessment. The platform focuses on simplicity and usability, allowing students to quickly find relevant notes and test their understanding using MCQs. It was built as a college minor project with an emphasis on practical features and clean UI.',
         features: [
             'Subject-wise note sharing',
@@ -67,7 +68,9 @@ export const projectsData = [
             'Small businesses and teams often lack a simple system to track inventory changes, sales, and stock levels in real time.',
         solution:
             'Developed an inventory management system that allows users to manage products, update stock on sales or restocks, and view inventory activity through a dashboard.',
-        longDescription:
+            
+        whyBuilt:"I built InventLab during a hackathon to understand how real-world inventory systems work under time constraints. The goal was to design a practical solution for tracking stock movements while collaborating effectively as a team.",
+            longDescription:
             'InventLab is a hackathon-built inventory management system focused on simplicity and real-time tracking. The application allows teams to manage products, monitor stock levels, and log inventory actions such as sales and restocking. The project emphasized teamwork, clear API design, and building practical features within a limited time frame.',
         features: [
             'Product creation and management',
@@ -121,7 +124,8 @@ export const projectsData = [
             'Many beginner e-commerce projects lack realistic UI flows and proper state handling for shopping interactions.',
         solution:
             'Built a responsive frontend application that allows users to browse products, filter categories, manage a cart, and experience a clean e-commerce UI similar to real-world platforms.',
-        longDescription:
+        whyBuilt:"I built ShopHub to practice designing realistic e-commerce UI flows and managing complex frontend state. The project helped me understand how real shopping experiences are structured on modern platforms.",
+            longDescription:
             'ShopHub is a frontend-only e-commerce project built to strengthen UI design, component architecture, and state management skills. The application focuses on realistic shopping flows such as product listing, category filtering, cart updates, and responsive layouts. While it does not include backend or payment integration, it closely mirrors real e-commerce user experiences.',
         features: [
             'Product listing with category-based filtering',
