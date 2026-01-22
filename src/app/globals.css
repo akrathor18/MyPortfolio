@@ -1,6 +1,22 @@
 @import 'tailwindcss';
 
+
 @custom-variant dark (&:is(.dark *));
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-120vh);
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
+
+
 
 :root {
   --background: #0a0a0a;

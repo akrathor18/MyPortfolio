@@ -4,49 +4,50 @@ import { BookOpen, Code, Lightbulb, Zap, Rocket, Award } from 'lucide-react';
 
 export default function Journey() {
   const journeySteps = [
-    {
-      id: 1,
-      title: 'HTML & CSS Foundations',
-      icon: BookOpen,
-      description:
-        'My curiosity about programming started with learning basic HTML and CSS. I began teaching myself through YouTube and online resources, building simple static webpages and understanding how the web works.',
-    },
-    {
-      id: 2,
-      title: 'JavaScript Mastery',
-      icon: Code,
-      description:
-        'As I moved to JavaScript, the learning curve became steeper. Coming from HTML and CSS, JavaScript felt confusing at first, but I stayed consistent and gradually understood core programming concepts by building small projects.',
-    },
-    {
-      id: 3,
-      title: 'React & Frontend',
-      icon: Lightbulb,
-      description:
-        'I transitioned to React with its component-based thinking and state management. Initially challenging, but with continuous practice and project-building, I became comfortable building frontend applications using React.',
-    },
-    {
-      id: 4,
-      title: 'Backend Development',
-      icon: Zap,
-      description:
-        'I moved into backend development, learning Node.js, Express, and MongoDB. I focused on strengthening fundamentals by creating small backend projects and APIs.',
-    },
-    {
-      id: 5,
-      title: 'Full Stack Development',
-      icon: Rocket,
-      description:
-        'I started building full-stack applications using the MERN stack and Next.js, including projects like StudyHub. I also participated in a hackathon with my team, building an inventory management system called InventLab.',
-    },
-    {
-      id: 6,
-      title: 'Continuous Learning',
-      icon: Award,
-      description:
-        'All of this learning happened alongside my regular college studies. Everything I know today is the result of self-learning through YouTube, hands-on practice, and consistently building projects.',
-    },
-  ];
+  {
+    id: 1,
+    title: 'Curiosity Over Comfort',
+    icon: BookOpen,
+    description:
+      'I started with HTML and CSS out of pure curiosity. At first, I didn’t even know what a div really did — I just followed YouTube tutorials and experimented. Building simple static pages made me realize how the web actually works, and that feeling pulled me deeper.',
+  },
+  {
+    id: 2,
+    title: 'The Phase That Almost Made Me Quit',
+    icon: Code,
+    description:
+      'JavaScript was confusing and overwhelming at the beginning. Coming from HTML and CSS, logic, functions, and errors felt intimidating. I broke things constantly, Googled endlessly, and questioned myself — but small projects slowly made everything click.',
+  },
+  {
+    id: 3,
+    title: 'Learning to Think in Components',
+    icon: Lightbulb,
+    description:
+      'React completely changed how I thought about building UIs. State, props, and reusability felt strange at first, but once I understood component-based thinking, frontend development became more structured and enjoyable.',
+  },
+  {
+    id: 4,
+    title: 'Understanding What Happens Behind the Scenes',
+    icon: Zap,
+    description:
+      'Curiosity pushed me toward backend development. Learning Node.js, Express, and MongoDB helped me understand how data flows, how APIs work, and how real applications function beyond the UI.',
+  },
+  {
+    id: 5,
+    title: 'From Learner to Builder',
+    icon: Rocket,
+    description:
+      'I began building full-stack applications using the MERN stack and Next.js. Projects like StudyHub and a hackathon-built inventory system taught me how to think like a developer — not just write code, but solve real problems.',
+  },
+  {
+    id: 6,
+    title: 'Still Learning, Still Curious',
+    icon: Award,
+    description:
+      'All of this growth happened alongside my college studies. Everything I know today comes from self-learning, late-night debugging, and consistently building projects. This journey isn’t finished — it’s just getting started.',
+  },
+];
+
 
   return (
     <section className="py-20 px-6 bg-background relative">
