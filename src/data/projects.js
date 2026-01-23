@@ -41,26 +41,48 @@ export const projectsData = [
             {
                 id: "dashboard",
                 title: "Dashboard Overview",
-                description: "Shows user stats, recent activity, and quick access to subjects.",
+                description: "Displays user statistics, recent activity, quizzes attempted, and quick actions for notes and quizzes.",
                 image: "/Projects/studyhub/dashboard.PNG",
-                feature: "User Overview"
+                feature: "User Overview & Analytics"
             },
             {
                 id: "notes",
                 title: "Notes Explorer",
-                description: "Browse and download subject-wise notes uploaded by students.",
-                image: "/Projects/studyhub/notes.png",
+                description: "Browse, filter, preview, and download subject-wise notes shared by students.",
+                image: "/Projects/studyhub/notes.PNG",
                 feature: "Notes Management"
             },
             {
-                id: "quiz",
-                title: "Quiz Interface",
-                description: "MCQ-based quizzes with instant feedback and scoring.",
-                image: "/Projects/studyhub/quiz.png",
-                feature: "Assessment"
+                id: "create-note",
+                title: "Create & Upload Notes",
+                description: "Allows users to create notes with subject selection, content editor, and file attachments.",
+                image: "/Projects/studyhub/createnotes.PNG",
+                feature: "Content Creation"
+            },
+            {
+                id: "quizzes",
+                title: "Quiz Library",
+                description: "Explore quizzes by subject and difficulty level with details like time limit and total questions.",
+                image: "/Projects/studyhub/quiz.PNG",
+                feature: "Quiz Discovery"
+            },
+            {
+                id: "quiz-interface",
+                title: "Quiz Attempt Interface",
+                description: "Interactive MCQ-based quiz interface with progress tracking and time management.",
+                image: "/Projects/studyhub/quizinterface.PNG",
+                feature: "Assessment & Interaction"
+            },
+            {
+                id: "profile",
+                title: "User Profile & Activity",
+                description: "Shows user information, performance stats, created content, and recent quiz activity.",
+                image: "/Projects/studyhub/profile.png",
+                feature: "User Profile & Progress"
             }
         ],
-          
+
+
         role: 'Full Stack Developer',
         roleDescription: 'Built StudyHub as a solo full-stack project from idea to implementation. Worked on frontend UI development, backend API integration, database design, and core features like notes and quizzes. Focused on building a functional, scalable learning platform while improving real-world full-stack development skills.',
         responsibilities: [
@@ -118,26 +140,49 @@ export const projectsData = [
         ],
         screenshots: [
             {
-                title: 'Product Catalog',
-                description: 'Beautiful and intuitive product listing with advanced filtering options',
-                image: "/images/Capture.PNG"
+                id: "dashboard",
+                title: "Inventory Dashboard",
+                description: "Provides a real-time overview of stock levels, products, categories, low-stock alerts, and recent inventory activity.",
+                image: "/Projects/inventlabs/dashboard.PNG",
+                feature: "Inventory Analytics"
             },
             {
-                title: 'Shopping Cart',
-                description: 'Streamlined cart experience with real-time inventory updates',
-                image: "/images/Capture.PNG"
+                id: "inventory",
+                title: "Inventory Management",
+                description: "Manage products with stock levels, categories, thresholds, and real-time status indicators.",
+                image: "/Projects/inventlabs/inventory.PNG",
+                feature: "Product & Stock Management"
             },
             {
-                title: 'Checkout Process',
-                description: 'Secure and user-friendly checkout with multiple payment methods',
-                image: "/images/Capture.PNG"
+                id: "add-product",
+                title: "Add New Product",
+                description: "Form to add new products with SKU, barcode, category, stock quantity, threshold alerts, and expiry date support.",
+                image: "/Projects/inventlabs/addproducts.png",
+                feature: "Product Creation"
             },
             {
-                title: 'Admin Dashboard',
-                description: 'Comprehensive dashboard for managing products, orders, and analytics',
-                image: "/images/Capture.PNG"
+                id: "categories",
+                title: "Category Management",
+                description: "Create and manage product categories to organize inventory efficiently.",
+                image: "/Projects/inventlabs/category.PNG",
+                feature: "Category Organization"
             },
+            {
+                id: "inventory-logs",
+                title: "Inventory Logs",
+                description: "Tracks all inventory movements such as stock additions, removals, and updates with user and timestamp details.",
+                image: "/Projects/inventlabs/inventorylogs.png",
+                feature: "Audit & Tracking"
+            },
+            {
+                id: "reports",
+                title: "Reports & Analytics",
+                description: "Visual analytics including stock distribution, deficit analysis, and product-wise inventory reports.",
+                image: "/Projects/inventlabs/reports.png",
+                feature: "Reporting & Insights"
+            }
         ],
+
         role: 'Full Stack Developer',
         roleDescription: 'Built InventLab as a full-stack inventory management system to track products, stock movements, and sales. Worked on designing the backend APIs, database schema, and frontend dashboards. Focused on building a reliable system with clear inventory logs, role-based actions, and real-time insights.',
         responsibilities: [
@@ -193,6 +238,58 @@ export const projectsData = [
             'Learned to design realistic UI flows for e-commerce applications',
             'Gained confidence building larger frontend-only projects',
         ],
+        screenshots: [
+            {
+                id: "home",
+                title: "Home Page",
+                description: "Landing page showcasing featured products, key benefits like free shipping and secure payments, and a clear call-to-action.",
+                image: "/Projects/shophub/home.PNG",
+                feature: "Product Discovery"
+            },
+            {
+                id: "products",
+                title: "Product Listing",
+                description: "Browse all products with category filters, price range selection, sorting options, and wishlist support.",
+                image: "/Projects/shophub/products.PNG",
+                feature: "Product Browsing & Filtering"
+            },
+            {
+                id: "categories",
+                title: "Product Categories",
+                description: "Explore products by category such as Audio, Wearables, and Accessories for easier navigation.",
+                image: "/Projects/shophub/categories.PNG",
+                feature: "Category-Based Navigation"
+            },
+            {
+                id: "cart",
+                title: "Shopping Cart",
+                description: "View selected products, adjust quantities, remove items, and see real-time price calculations.",
+                image: "/Projects/shophub/cart.PNG",
+                feature: "Cart Management"
+            },
+            {
+                id: "checkout",
+                title: "Checkout Page",
+                description: "Secure checkout flow with shipping details, GST calculation, order summary, and payment confirmation.",
+                image: "/Projects/shophub/checkout.PNG",
+                feature: "Order Processing"
+            },
+            {
+                id: "profile",
+                title: "User Profile",
+                description: "Manage personal information, address details, and account settings from a centralized profile page.",
+                image: "/Projects/shophub/profile.PNG",
+                feature: "User Account Management"
+            },
+            {
+                id: "contact",
+                title: "Contact & Support",
+                description: "Contact page with business details and a support form for customer inquiries.",
+                image: "/Projects/shophub/contact.PNG",
+                feature: "Customer Support"
+            }
+        ],
+          
         role: 'Frontend Developer',
         roleDescription:
             'Developed ShopHub as a solo frontend-focused e-commerce project to practice building realistic shopping interfaces. Worked on UI design, component architecture, and client-side state management to simulate real-world product browsing and cart interactions.',
