@@ -1,11 +1,10 @@
 import { use } from 'react';
 import Link from 'next/link';
 import { projectsData } from '../../../data/projects.js';
-import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb, UserCheck, CheckCircle2, Heart } from 'lucide-react';
 import Projecet404 from '@/components/Projecet404.jsx';
-
+import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb, UserCheck, CheckCircle2, Heart, Monitor, X } from 'lucide-react';
 import { projects } from '@/data/projects';
-
+import ImagesPreview from '@/components/projectDetails/ImagesPreview.jsx';
 export function generateStaticParams() {
     return projects.map((project) => ({
         projectId: project.id,
@@ -14,7 +13,6 @@ export function generateStaticParams() {
 
 export default function ProjectDetail({ params }) {
     const { projectId } = use(params);
-    console.log(projectId);
     const project = projectsData.find(
         (p) => p.id === projectId
     );
@@ -23,6 +21,7 @@ export default function ProjectDetail({ params }) {
             <Projecet404 />
         );
     }
+
 
     return (
         <main className="bg-background text-foreground min-h-screen">
@@ -177,6 +176,7 @@ export default function ProjectDetail({ params }) {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
             </section>
+            <ImagesPreview project={project}/>
             {/* My Role Section */}
             <section className="py-12 md:py-20 px-6 border-t border-border relative">
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
@@ -191,12 +191,12 @@ export default function ProjectDetail({ params }) {
                         <div className="bg-card border border-primary/20 rounded-lg p-6 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
                             <div className="flex flex-col items-start gap-3 mb-4">
                                 <div className="flex items-center align-baseline gap-3">
-                                <UserCheck className="w-6 h-6 text-primary flex-shrink-0" />
+                                    <UserCheck className="w-6 h-6 text-primary flex-shrink-0" />
                                     <h3 className="text-xl font-bold text-foreground ">{project.role}</h3>
                                 </div>
-                                    <p className="text-muted-foreground leading-relaxed">
-                                        {project.roleDescription}
-                                    </p>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    {project.roleDescription}
+                                </p>
                             </div>
                         </div>
 
