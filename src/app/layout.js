@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,7 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Ashish Kumar - Portfolio",
-  description: "Ashish Kumar's personal portfolio showcasing projects, skills, and contact information.",
+  description:
+    "Ashish Kumar's personal portfolio showcasing projects, skills, and contact information.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -22,7 +27,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><Navigation />
+      >
+        <Navigation />
         {children}
         <Footer />
       </body>
