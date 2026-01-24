@@ -1,19 +1,14 @@
 'use client';
-import AnimatedBackground from './AnimatedBackground.jsx';
+
 import Link from 'next/link';
 import { ChevronDown, Code2, ArrowRight, Download } from 'lucide-react';
-
+import AnimatedBackground from './AnimatedBackground';
 export default function Hero() {
   return (
-   
-
-    <section className="relative min-h-screen bg-background overflow-hidden flex items-center justify-center px-6 py-20">
-  <AnimatedBackground />
-
-  <div className="relative z-10 max-w-3xl mx-auto text-center">
-    {/* all hero content */}
-     <div className="relative z-10 text-center">
-    <div className="max-w-3xl mx-auto text-center relative z-10">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-background relative overflow-hidden">
+      {/* Enhanced Animated Background */}
+      <AnimatedBackground />
+      <div className="max-w-3xl mx-auto text-center relative z-10">
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 group cursor-default">
           <Code2 className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
@@ -68,9 +63,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-  </div>
-  </div>
-</section>
-
+    </section>
   );
 }
