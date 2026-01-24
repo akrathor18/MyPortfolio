@@ -32,7 +32,12 @@ export default function Projects() {
                 <span className="text-sm font-mono text-primary">
                   {String(project.id).padStart(2, '0')}
                 </span>
-                <Lightbulb className="w-5 h-5 text-primary/40 group-hover:text-primary group-hover:rotate-12 transition-all duration-300" />
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 text-xs font-semibold bg-primary/10 border border-primary/30 rounded-full text-primary">
+                    {project.role}
+                  </span>
+                  <Lightbulb className="w-5 h-5 text-primary/40 group-hover:text-primary group-hover:rotate-12 transition-all duration-300" />
+                </div>
               </div>
 
               {/* Title */}

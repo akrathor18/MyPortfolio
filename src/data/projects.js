@@ -94,7 +94,7 @@ export const projectsData = [
             'Deployed the application and handled basic performance optimizations',
         ],
 
-        technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+        technologies: ['React', 'Tailwind CSS', 'Node.js','Express','JWT Authentication', 'MongoDB',],
         links: {
             github: 'https://github.com/akrathor18/Note-sharing-app',
             live: 'https://studyhub-dev.web.app/',

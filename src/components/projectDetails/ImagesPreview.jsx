@@ -32,9 +32,16 @@ function ImagesPreview(project) {
                                     </div>
                                     {/* Screenshot Info */}
                                     <div className="p-4">
-                                        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                                            {screenshot.title}
-                                        </h3>
+                                        <div className="flex items-start justify-between gap-2 mb-2">
+                                            <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                                                {screenshot.title}
+                                            </h3>
+                                            {screenshot.feature && (
+                                                <span className="px-2 py-1 text-xs font-semibold bg-primary/10 border border-primary/30 rounded-full text-primary whitespace-nowrap">
+                                                    {screenshot.feature}
+                                                </span>
+                                            )}
+                                        </div>
                                         <p className="text-sm text-muted-foreground">
                                             {screenshot.description}
                                         </p>
@@ -66,18 +73,25 @@ function ImagesPreview(project) {
 
                         {/* Image Container */}
                         <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background flex items-center justify-center min-h-[200px] md:min-h-[500px] relative">
-                        <img
+                            <img
                                 src={selectedScreenshot.image}
                                 alt={selectedScreenshot.title}
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                
+
                         {/* Screenshot Info */}
                         <div className="p-6 bg-card border-t border-primary/20">
-                            <h3 className="text-2xl font-bold text-foreground mb-3">
-                                {selectedScreenshot.title}
-                            </h3>
+                            <div className="flex items-start justify-between gap-3 mb-3">
+                                <h3 className="text-2xl font-bold text-foreground flex-1">
+                                    {selectedScreenshot.title}
+                                </h3>
+                                {selectedScreenshot.feature && (
+                                    <span className="px-4 py-2 text-sm font-semibold bg-primary/10 border border-primary/30 rounded-full text-primary whitespace-nowrap">
+                                        {selectedScreenshot.feature}
+                                    </span>
+                                )}
+                            </div>
                             <p className="text-muted-foreground text-lg leading-relaxed">
                                 {selectedScreenshot.description}
                             </p>
