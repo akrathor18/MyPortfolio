@@ -3,18 +3,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@keyframes float {
+@keyframes float-up {
   0% {
     transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
   }
   100% {
     transform: translateY(-120vh);
+    opacity: 0;
   }
 }
 
-.animate-float {
-  animation: float linear infinite;
+.animate-float-up {
+  animation-name: float-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+
+
+
 
 ::-moz-selection { 
   color:#0aad9d;
