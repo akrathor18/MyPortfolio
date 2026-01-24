@@ -1,13 +1,13 @@
 'use client';
 
-import { Lightbulb, Brain, Users } from 'lucide-react';
+import { Lightbulb, Brain, Users, Globe } from 'lucide-react';
 
 export default function About() {
   return (
     <section id="about" className="py-20 px-6 bg-background relative">
       {/* Section Separator Top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/20 to-transparent"></div>
-
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -70,6 +70,24 @@ export default function About() {
 
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Languages Section */}
+        <div className="mt-16 pt-16 border-t border-border">
+          <div className="flex items-center gap-2 mb-8">
+            <Globe className="w-6 h-6 text-primary" />
+            <h3 className="text-2xl font-bold text-foreground">Languages</h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['English', 'Hindi', 'Panjabi'].map((lang, i) => (
+              <div
+                key={i}
+                className="px-4 py-3 bg-card border border-border rounded-lg text-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300 hover:scale-105 cursor-default transform"
+              >
+                {lang}
+              </div>
+            ))}
           </div>
         </div>
       </div>

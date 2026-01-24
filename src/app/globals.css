@@ -16,7 +16,33 @@
   animation: float linear infinite;
 }
 
+::-moz-selection { 
+  color:#0aad9d;
+  background: #04201b;
+}
 
+::selection {
+  color:#0aad9d;
+  background: #04201b;
+}
+
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out;
+  }
+}
 
 :root {
   --background: #0a0a0a;
