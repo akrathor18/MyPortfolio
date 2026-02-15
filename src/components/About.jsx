@@ -72,9 +72,8 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Languages Section */}
-       
       {/* Section Separator Bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
     </section>
