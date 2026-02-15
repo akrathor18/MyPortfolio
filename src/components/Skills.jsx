@@ -17,8 +17,9 @@ import {
   SiPostman,
   SiExpress,
   SiRender,
+  SiPostgresql ,
+  SiPrisma ,
 } from "react-icons/si";
-
 import { useState } from 'react';
 export default function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -37,7 +38,8 @@ export default function Skills() {
     MongoDB: SiMongodb,
     MySQL: SiMysql,
     Mongoose: Database,
-
+    PostgreSQL:   SiPostgresql ,
+    prisma: SiPrisma ,
     Git: FaGitAlt,
     GitHub: FaGithub,
     'VS Code': Code,
@@ -64,6 +66,8 @@ export default function Skills() {
   MongoDB: 'NoSQL document-based database',
   MySQL: 'Relational database management system',
   Mongoose: 'ODM library for MongoDB schema modeling',
+  PostgreSQL: 'Advanced open-source relational database',
+  prisma: 'Next-generation ORM for Node.js and TypeScript',
 
   // Tools & Deployment
   Git: 'Distributed version control system',
@@ -89,7 +93,7 @@ export default function Skills() {
     {
       category: 'Database',
       icon: Database,
-      skills: ['MongoDB', 'MySQL', 'Mongoose',],
+      skills: ['MongoDB', 'MySQL', 'Mongoose', 'PostgreSQL', 'prisma'],
     },
     {
       category: 'Tools',
