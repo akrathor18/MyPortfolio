@@ -2,6 +2,7 @@ export const projects = [
     { id: 'studyhub', title: 'StudyHub' },
     { id: 'inventlab', title: 'InventLab' },
     { id: 'shophub', title: 'ShopHub' },
+    { id: 'urbanmart', title: 'UrbanMart' },
 ];
 
 export const projectsData = [
@@ -94,13 +95,156 @@ export const projectsData = [
             'Deployed the application and handled basic performance optimizations',
         ],
 
-        technologies: ['React', 'Tailwind CSS', 'Node.js','Express','JWT Authentication', 'MongoDB',],
+        technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'JWT Authentication', 'MongoDB',],
         links: {
             github: 'https://github.com/akrathor18/Note-sharing-app',
             live: 'https://studyhub-dev.web.app/',
         },
         stats: {
             duration: '4 months',
+            teamSize: 'Solo',
+            status: 'Completed',
+        },
+    },
+    {
+        id: 'urbanmart',
+        title: 'UrbanMart',
+        description:
+            'A full-stack production-style e-commerce platform with advanced filtering, cart & wishlist management, Razorpay payment integration, and a complete order lifecycle system.',
+
+        problem:
+            'Many beginner e-commerce projects focus only on UI and basic CRUD operations, lacking real-world features like stock validation, secure payment processing, structured order states, and scalable database design.',
+
+        solution:
+            'Built a complete e-commerce system with structured relational schema, stock-aware cart logic, secure Razorpay payment integration with backend verification, order lifecycle management, server-side filtering & pagination, and clean state handling to simulate real-world business logic.',
+
+        whyBuilt:
+            "I built UrbanMart to go beyond a basic shopping website and understand how real e-commerce systems work internally. I wanted to design proper database relationships, implement secure payment verification, handle order states correctly, and build production-level backend logic instead of just focusing on UI.",
+
+        longDescription:
+            'UrbanMart is a full-stack e-commerce application designed to simulate real-world online shopping platforms. It includes advanced filtering, sorting, server-side pagination, stock validation before checkout, wishlist functionality, and structured order creation. Razorpay is integrated for secure online payments with backend signature verification and order status updates. The backend is built using Node.js with Prisma ORM and PostgreSQL, ensuring a relational and scalable database design. This project helped me understand payment gateway integration, business logic implementation, and handling complex user flows like cart management and transaction states.',
+
+        features: [
+            'Advanced product filtering and sorting',
+            'Server-side pagination for performance optimization',
+            'Stock-aware quantity selection and validation',
+            'Cart and wishlist management',
+            'Complete checkout and order creation flow',
+            'Razorpay payment gateway integration',
+            'Backend signature verification for secure payment validation',
+            'Structured order lifecycle (CREATED → PENDING_PAYMENT → PAID → FAILED → EXPIRED)',
+            'Secure authentication with JWT',
+        ],
+
+        challenges: [
+            'Designing a normalized relational database schema using Prisma',
+            'Handling order state transitions correctly',
+            'Integrating Razorpay and implementing secure signature verification',
+            'Preventing overselling with stock validation logic',
+            'Managing complex cart state across multiple pages',
+            'Implementing pagination and filtering efficiently',
+        ],
+
+        learnings: [
+            'Deepened understanding of relational database modeling',
+            'Learned how real-world e-commerce payment systems operate',
+            'Gained hands-on experience integrating Razorpay payment gateway',
+            'Understood the importance of backend payment verification and security',
+            'Improved backend API structuring and modularization',
+            'Strengthened full-stack debugging and optimization skills',
+        ],
+
+        screenshots: [
+            {
+                id: "homepage",
+                title: "Homepage & Product Listing",
+                description: "Displays featured products with filtering, sorting, and pagination options.",
+                image: "/Projects/urbanmart/homepage.png",
+                feature: "Product Discovery"
+            },
+            {
+                id: "product-details",
+                title: "Product Details Page",
+                description: "Shows detailed product information with stock validation and quantity selection.",
+                image: "/Projects/urbanmart/product.PNG",
+                feature: "Product Information & Stock Logic"
+            },
+            {
+                id: "cart",
+                title: "Cart & Wishlist",
+                description: "Users can manage cart items, update quantities, and move items to wishlist.",
+                image: "/Projects/urbanmart/cart.PNG",
+                feature: "Cart Management"
+            },
+            {
+                id: "checkout",
+                title: "Checkout Flow",
+                description: "Structured checkout system with order summary and validation before order creation.",
+                image: "/Projects/urbanmart/checkout.png",
+                feature: "Order Processing"
+            },
+            {
+                id: "payment",
+                title: "Secure Payment Integration (Razorpay)",
+                description: "Integrated Razorpay checkout for secure online payments with backend verification and order status updates.",
+                image: "/Projects/urbanmart/payment.PNG",
+                feature: "Payment Processing & Order Lifecycle"
+            },
+            {
+                id: "profile",
+                title: "User Profile Dashboard",
+                description: "Displays user account details, personal information, and quick access to order history and account settings.",
+                image: "/Projects/urbanmart/profile.png",
+                feature: "User Account Management"
+            },
+            {
+                id: "order-history",
+                title: "Order History",
+                description: "Shows a list of all previous orders with status indicators (CREATED, PAID, FAILED, EXPIRED) and summary details.",
+                image: "/Projects/urbanmart/orderHistory.PNG",
+                feature: "Order Tracking & Status Overview"
+            },
+            {
+                id: "order-details",
+                title: "Order Details View",
+                description: "Detailed breakdown of a selected order including products, quantity, pricing, payment status, and timestamps.",
+                image: "/Projects/urbanmart/orderDetails.png",
+                feature: "Order Lifecycle & Transaction Insights"
+            }
+        ],
+
+        role: 'Full Stack Developer',
+
+        roleDescription:
+            'Built UrbanMart as a full-stack project focusing heavily on backend architecture, database schema design, and business logic implementation. Designed relational models using Prisma, implemented authentication and role-based access, and developed both customer and admin interfaces.',
+
+        responsibilities: [
+            'Designed relational database schema using Prisma & PostgreSQL',
+            'Developed RESTful APIs for products, cart, and orders',
+            'Implemented order lifecycle state management',
+            'Built responsive UI using React and Tailwind CSS',
+            'Implemented authentication and protected routes',
+            'Optimized queries using server-side pagination and filtering',
+            'Tested edge cases like stock mismatch and failed orders',
+        ],
+
+        technologies: [
+            'React',
+            'Tailwind CSS',
+            'Node.js',
+            'Express.js',
+            'Prisma ORM',
+            'PostgreSQL',
+            'JWT Authentication'
+        ],
+
+        links: {
+            live: 'https://urbanmart-dev.web.app/',
+            github: 'http://github.com/akrathor18/urbanmart',
+        },
+
+        stats: {
+            duration: '2 weeks (~120+ focused development hours)',
             teamSize: 'Solo',
             status: 'Completed',
         },
@@ -289,7 +433,7 @@ export const projectsData = [
                 feature: "Customer Support"
             }
         ],
-          
+
         role: 'Frontend Developer',
         roleDescription:
             'Developed ShopHub as a solo frontend-focused e-commerce project to practice building realistic shopping interfaces. Worked on UI design, component architecture, and client-side state management to simulate real-world product browsing and cart interactions.',
