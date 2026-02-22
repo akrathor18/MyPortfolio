@@ -29,11 +29,13 @@ export const metadata = {
   alternates: {
     canonical: "https://ashish-codes.web.app/",
   },
+   verification: {
+    google: "R3MPwDbeKhFvFw0Mdu_ya7In-9zJcKxQSrt478Vyu8k",
+  },
   icons: {
     icon: "/favicon.png",
   },
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
