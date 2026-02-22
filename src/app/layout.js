@@ -14,9 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Ashish Kumar - Portfolio",
+  title: "Ashish Codes | Full Stack Developer Portfolio",
   description:
-    "Ashish Kumar's personal portfolio showcasing projects, skills, and contact information.",
+    "Ashish Codes – Full Stack Web Developer portfolio. Built real-world projects with React, Next.js, Node.js,Express, Prisma, MongoDB, PostgreSQL, and Razorpay.",
+  keywords: [
+    "Ashish Codes",
+    "Ashish Full Stack Developer",
+    "Web Developer Portfolio India",
+    "MERN Stack Developer",
+    "React Developer Portfolio",
+    "UrbanMart e-commerce project",
+  ],
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://ashish-codes.web.app/",
+  },
   icons: {
     icon: "/favicon.png",
   },

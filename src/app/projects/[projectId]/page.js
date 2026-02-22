@@ -1,9 +1,8 @@
 import { use } from 'react';
 import Link from 'next/link';
-import { projectsData } from '../../../data/projects.js';
+import { projectsData, projects } from '@/data/projects';
 import Projecet404 from '@/components/Projecet404.jsx';
 import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb, UserCheck, CheckCircle2, Heart, Monitor, X } from 'lucide-react';
-import { projects } from '@/data/projects';
 import ImagesPreview from '@/components/projectDetails/ImagesPreview.jsx';
 export function generateStaticParams() {
     return projects.map((project) => ({
@@ -11,6 +10,44 @@ export function generateStaticParams() {
     }));
 }
 
+export async function generateMetadata({ params }) {
+    const { projectId } = await params;
+    const project = projectsData.find(
+        (p) => p.id === projectId
+    );
+
+    if (!project) {
+        return {
+            title: "Project Not Found | Ashish Codes",
+            description: "The project you are looking for does not exist.",
+        };
+    }
+
+    return {
+        title: `${project.title} – ${project.description} | Ashish Codes`,
+        description: project.longDescription,
+        alternates: {
+            canonical: `https://ashish-codes.web.app/projects/${project.id}`,
+        },
+        openGraph: {
+            title: `${project.title} – Ashish Codes`,
+            description: project.description,
+            url: `https://ashish-codes.web.app/projects/${project.id}`,
+            siteName: "Ashish Codes",
+            images: [
+                {
+                    url: project.screenshots?.[0]?.image
+                        ? `https://ashish-codes.web.app${project.screenshots[0].image}`
+                        : "https://ashish-codes.web.app/favicon.png",
+                    width: 1200,
+                    height: 630,
+                    alt: project.title,
+                },
+            ],
+            type: "article",
+        },
+    };
+}
 export default function ProjectDetail({ params }) {
     const { projectId } = use(params);
     const project = projectsData.find(
@@ -70,7 +107,8 @@ export default function ProjectDetail({ params }) {
                     {/* CTA Links */}
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a
-                            traget="_blank"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href={project.links.github}
                             className="flex-1 px-6 py-3 bg-background border border-border text-foreground font-semibold rounded-lg hover:border-primary/50 hover:bg-card transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
                         >
@@ -78,7 +116,8 @@ export default function ProjectDetail({ params }) {
                             View Code
                         </a>
                         <a
-                            traget="_blank"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href={project.links.live}
                             className="flex-1 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
                         >
@@ -176,7 +215,7 @@ export default function ProjectDetail({ params }) {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
             </section>
-            <ImagesPreview project={project}/>
+            <ImagesPreview project={project} />
             {/* My Role Section */}
             <section className="py-12 md:py-20 px-6 border-t border-border relative">
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
