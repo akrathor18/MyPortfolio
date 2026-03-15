@@ -12,6 +12,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiJavascript,
+  SiTypescript,
   SiMongodb,
   SiMysql,
   SiPostman,
@@ -19,6 +20,7 @@ import {
   SiRender,
   SiPostgresql ,
   SiPrisma ,
+  SiSocketdotio ,
 } from "react-icons/si";
 import { useState } from 'react';
 export default function Skills() {
@@ -29,11 +31,14 @@ export default function Skills() {
     'Next.js': SiNextdotjs,
     'Tailwind CSS': SiTailwindcss,
     JavaScript: SiJavascript,
+    TypeScript: SiTypescript,
 
     'Node.js': FaNodeJs,
     Express: SiExpress ,
     'REST APIs': Globe,
     'JWT Authentication': Wrench,
+'WebSockets': Globe,
+  'Socket.io': SiSocketdotio,
 
     MongoDB: SiMongodb,
     MySQL: SiMysql,
@@ -55,13 +60,15 @@ export default function Skills() {
   'Next.js': 'React framework with server-side rendering and routing',
   'Tailwind CSS': 'Utility-first CSS framework for rapid UI development',
   JavaScript: 'Core language for web development',
+  TypeScript: 'Superset of JavaScript with static typing for better code quality',
 
   // Backend
   'Node.js': 'JavaScript runtime for building backend services',
   Express: 'Minimalist web framework for Node.js',
   'JWT Authentication': 'Token-based authentication for securing APIs',
   'REST APIs': 'RESTful architecture for client–server communication',
-
+  'WebSockets': 'Protocol enabling real-time bidirectional communication between client and server',
+  'Socket.io': 'Library for building real-time applications using WebSockets',
   // Database
   MongoDB: 'NoSQL document-based database',
   MySQL: 'Relational database management system',
@@ -82,13 +89,13 @@ export default function Skills() {
     {
       category: 'Frontend',
       icon: Code,
-      skills: ['React', 'Next.js', 'Tailwind CSS', 'JavaScript'],
+      skills: ['React', 'Next.js','JavaScript', 'TypeScript','Tailwind CSS', ],
     },
 
     {
       category: 'Backend',
       icon: Server,
-      skills: ['Node.js', 'Express', "JWT Authentication", 'REST APIs'],
+      skills: ['Node.js', 'Express',  'WebSockets', 'Socket.io',"JWT Authentication", 'REST APIs'],
     },
     {
       category: 'Database',
