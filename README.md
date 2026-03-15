@@ -2,12 +2,12 @@
 
 A modern, responsive personal portfolio website built to showcase my projects, skills, and experience as a web developer.
 
-## 🚀 Live Link
+## Live Link
 🔗[ https://ashish-codes.web.app](https://ashish-codes.web.app/)
 
 ---
 
-## 📌 Features
+## Features
 
 - ⚡ Fast and optimized performance
 - 🎨 Clean and minimal UI
@@ -18,7 +18,7 @@ A modern, responsive personal portfolio website built to showcase my projects, s
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js
 - **Language:** JavaScript
