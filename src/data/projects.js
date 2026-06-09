@@ -3,6 +3,7 @@ export const projects = [
     { id: 'inventlab', title: 'InventLab' },
     { id: 'shophub', title: 'ShopHub' },
     { id: 'urbanmart', title: 'UrbanMart' },
+    { id: 'chatspark', title: 'ChatSpark' },
 ];
 
 export const projectsData = [
@@ -106,6 +107,150 @@ export const projectsData = [
             status: 'Completed',
         },
     },
+    {
+    id: 'chatspark',
+    title: 'ChatSpark',
+    description:
+        'A modern real-time chat application that enables instant messaging, user presence tracking, authentication, and seamless communication through WebSockets.',
+
+    problem:
+        'Many messaging platforms are either overly complex, resource-heavy, or lack customization opportunities for learning real-time application development. Building a scalable chat system involves challenges such as real-time communication, state synchronization, authentication, and user experience.',
+
+    solution:
+        'Developed a full-stack real-time messaging platform that allows users to communicate instantly, view online status, receive notifications, reply to messages, and manage conversations through a responsive and intuitive interface.',
+
+    whyBuilt:
+        "I built ChatSpark to gain hands-on experience with real-time systems and WebSocket communication. I wanted to understand how modern messaging platforms work behind the scenes, including authentication, socket management, conversation handling, and real-time updates.",
+
+    longDescription:
+        'ChatSpark is a real-time messaging platform inspired by modern communication applications. It enables users to connect, exchange messages instantly, view typing indicators, track online presence, and manage conversations in a clean and responsive interface. The project focuses on performance, scalability, and user experience while implementing industry-standard practices such as JWT authentication, OAuth integration, and Socket.IO-powered communication.',
+
+features: [
+    'Real-time messaging with Socket.IO',
+    'User authentication and authorization',
+    'Google OAuth and GitHub OAuth login',
+    'Online and offline user presence tracking',
+    'Typing indicators',
+    'Message reply functionality',
+    'Unread message counters',
+    'Conversation management',
+    'Code syntax highlighting for developers',
+    'Support for sharing code snippets within chats',
+    'Responsive chat interface',
+    'Protected routes and secure API access',
+    'Session persistence',
+    'Modern and intuitive user experience',
+],
+
+challenges: [
+    'Managing Socket.IO connections and user presence',
+    'Synchronizing real-time messages across clients',
+    'Implementing message reply functionality',
+    'Rendering code snippets with proper syntax highlighting',
+    'Handling authentication with multiple providers',
+    'Maintaining consistent application state',
+    'Implementing auto-scroll behavior during active conversations',
+    'Optimizing performance for real-time updates',
+    'Managing unread message counts and notifications',
+],
+learnings: [
+    'Deepened understanding of WebSocket communication and Socket.IO',
+    'Learned how real-time messaging systems are architected',
+    'Implemented syntax highlighting for code-sharing experiences',
+    'Improved backend API design and authentication workflows',
+    'Gained experience with state management in complex applications',
+    'Understood challenges of synchronization between frontend and backend',
+    'Learned best practices for scalable chat application development',
+    'Enhanced debugging and problem-solving skills for real-time systems',
+],
+
+    screenshots: [
+        {
+            id: "login",
+            title: "Authentication Page",
+            description: "Secure login and registration system with support for OAuth providers and JWT authentication.",
+            image: "/Projects/chatspark/login.png",
+            feature: "Authentication"
+        },
+        {
+            id: "chat-list",
+            title: "Conversation Sidebar",
+            description: "Displays user conversations, unread message counts, and online presence indicators.",
+            image: "/Projects/chatspark/sidebar.png",
+            feature: "Conversation Management"
+        },
+        {
+            id: "chat-window",
+            title: "Real-Time Chat Interface",
+            description: "Interactive messaging interface supporting instant message delivery and reply functionality.",
+            image: "/Projects/chatspark/chat-window.png",
+            feature: "Real-Time Messaging"
+        },
+        {
+            id: "code-snippet",
+            title: "Code Sharing & Syntax Highlighting",
+            description: "Developers can share code snippets directly in chat with automatic syntax highlighting for improved readability and collaboration.",
+            image: "/Projects/chatspark/code.png",
+            feature: "Developer-Friendly Messaging"
+        },
+        {
+            id: "typing",
+            title: "Typing Indicators",
+            description: "Shows real-time typing activity to improve communication experience.",
+            image: "/Projects/chatspark/typing.png",
+            feature: "Live User Activity"
+        },
+        {
+            id: "profile",
+            title: "User Profile",
+            description: "Manage profile information and account settings.",
+            image: "/Projects/chatspark/profile.png",
+            feature: "User Management"
+        },
+    ],
+
+    role: 'Full Stack Developer',
+
+    roleDescription:
+        'Built ChatSpark as a solo full-stack project from concept to deployment. Designed the frontend architecture, developed backend APIs, implemented real-time communication using Socket.IO, integrated authentication providers, and managed database design. Focused on creating a scalable and production-ready messaging platform.',
+
+    responsibilities: [
+        'Designed and developed the frontend using Next.js and TypeScript',
+        'Built RESTful APIs using Node.js and Express.js',
+        'Implemented real-time communication with Socket.IO',
+        'Integrated JWT authentication and OAuth providers',
+        'Designed MongoDB schemas for users, conversations, and messages',
+        'Implemented typing indicators, online presence, and reply functionality',
+        'Managed application state and frontend performance optimizations',
+        'Handled deployment and production configuration',
+    ],
+
+    technologies: [
+        'Next.js',
+        'TypeScript',
+        'React',
+        'Tailwind CSS',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Socket.IO',
+        'JWT Authentication',
+        'Google OAuth',
+        'GitHub OAuth',
+        'Zustand'
+    ],
+
+    links: {
+        github: 'https://github.com/akrathor18/chatSpark/',
+        live: 'https://chatspark-dev.vercel.app/',
+    },
+
+    stats: {
+        duration: '3 months',
+        teamSize: 'Solo',
+        status: 'Completed',
+    },
+},
     {
         id: 'urbanmart',
         title: 'UrbanMart',
