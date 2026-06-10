@@ -10,6 +10,7 @@ export const projectsData = [
     {
         id: 'studyhub',
         title: 'StudyHub',
+        year: '2025–2026',
         description:
             'A student-focused web platform for sharing study notes and practicing MCQ-based quizzes for selected subjects.',
         problem:
@@ -96,7 +97,7 @@ export const projectsData = [
             'Deployed the application and handled basic performance optimizations',
         ],
 
-        technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'JWT Authentication', 'MongoDB',],
+        technologies: ['React', 'Tailwind CSS', 'Zustand','Node.js', 'Express', 'JWT Authentication', 'MongoDB',],
         links: {
             github: 'https://github.com/akrathor18/Note-sharing-app',
             live: 'https://studyhub-dev.web.app/',
@@ -110,6 +111,7 @@ export const projectsData = [
     {
     id: 'chatspark',
     title: 'ChatSpark',
+    year: '2026',
     description:
         'A modern real-time chat application that enables instant messaging, user presence tracking, authentication, and seamless communication through WebSockets.',
 
@@ -254,6 +256,7 @@ learnings: [
     {
         id: 'urbanmart',
         title: 'UrbanMart',
+        year: '2026',
         description:
             'A full-stack production-style e-commerce platform with advanced filtering, cart & wishlist management, Razorpay payment integration, and a complete order lifecycle system.',
 
@@ -397,6 +400,7 @@ learnings: [
     {
         id: 'inventlab',
         title: 'InventLab',
+        year: '2025',
         description:
             'A real-time inventory management system built during a hackathon to track stock, sales, and inventory movements.',
         problem:
@@ -483,7 +487,7 @@ learnings: [
             'Handled data validation and error handling across the application',
         ],
 
-        technologies: ['Next.js', 'Node.js', 'Express', 'SQLite', 'Tailwind CSS'],
+        technologies: ['Next.js', 'Zustand','Node.js', 'Express', 'SQLite', 'Tailwind CSS'],
         links: {
             github: 'https://github.com/Kashina69/InventLabs/',
             live: 'https://invent-labs-frontend.vercel.app/',
@@ -498,6 +502,7 @@ learnings: [
     {
         id: 'shophub',
         title: 'ShopHub',
+        year: '2025',
         description:
             'A frontend-focused e-commerce application that simulates a modern online shopping experience with product browsing and cart management.',
         problem:
