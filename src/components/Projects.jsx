@@ -138,25 +138,24 @@ export default function Projects() {
                                             {project.description}
                                         </p>
 
-                                        {/* Problem & Solution */}
-                                        <div className="space-y-3 mb-6 py-4 border-y border-border">
-                                            <div>
-                                                <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
-                                                    Problem
-                                                </p>
-                                                <p className="text-sm text-muted-foreground">
-                                                    {project.problem}
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
-                                                    Solution
-                                                </p>
-                                                <p className="text-sm text-muted-foreground">
-                                                    {project.solution}
-                                                </p>
-                                            </div>
+
+                                        {/* Key Features */}
+                                        <div className="mb-6 py-4 border-y border-border">
+                                            <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-3">
+                                                Key Features
+                                            </p>
+                                            <ul className="space-y-2">
+                                                {project.features.slice(0, 3).map((feature, i) => (
+                                                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                                        <span className="mt-0.5 w-4 h-4 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                                                            <span className="w-1.5 h-1.5 rounded-full bg-primary block" />
+                                                        </span>
+                                                        {feature}
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </div>
+
 
                                         {/* Technologies — highlight active filter */}
                                         <div className="mb-6">
