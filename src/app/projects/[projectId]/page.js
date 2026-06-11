@@ -2,7 +2,7 @@ import { use } from 'react';
 import Link from 'next/link';
 import { projectsData, projects } from '@/data/projects';
 import Projecet404 from '@/components/Projecet404.jsx';
-import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb, UserCheck, CheckCircle2, Heart, Monitor, X } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, Code, Eye, AlertCircle, Lightbulb, UserCheck, CheckCircle2, Heart, Monitor, X, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
 import ImagesPreview from '@/components/projectDetails/ImagesPreview.jsx';
 export function generateStaticParams() {
     return projects.map((project) => ({
@@ -11,6 +11,39 @@ export function generateStaticParams() {
 }
 
 const SITE_URL = 'https://ashish-codes.web.app';
+
+// Official docs links for technology badges
+const techLinks = {
+    'React': 'https://react.dev',
+    'Next.js': 'https://nextjs.org/docs',
+    'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    'TypeScript': 'https://www.typescriptlang.org/docs',
+    'Tailwind CSS': 'https://tailwindcss.com/docs',
+    'Node.js': 'https://nodejs.org/en/docs',
+    'Express.js': 'https://expressjs.com',
+    'Express': 'https://expressjs.com',
+    'MongoDB': 'https://www.mongodb.com/docs',
+    'MySQL': 'https://dev.mysql.com/doc',
+    'PostgreSQL': 'https://www.postgresql.org/docs',
+    'Prisma ORM': 'https://www.prisma.io/docs',
+    'Prisma': 'https://www.prisma.io/docs',
+    'Socket.IO': 'https://socket.io/docs',
+    'JWT Authentication': 'https://jwt.io/introduction',
+    'Google OAuth': 'https://developers.google.com/identity/protocols/oauth2',
+    'GitHub OAuth': 'https://docs.github.com/en/apps/oauth-apps/building-oauth-apps',
+    'Zustand': 'https://zustand-demo.pmnd.rs',
+    'Mongoose': 'https://mongoosejs.com/docs',
+    'SQLite': 'https://www.sqlite.org/docs.html',
+    'Razorpay': 'https://razorpay.com/docs',
+    'REST APIs': 'https://restfulapi.net',
+    'WebSockets': 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API',
+    'Firebase Hosting': 'https://firebase.google.com/docs/hosting',
+    'Render': 'https://render.com/docs',
+    'Git': 'https://git-scm.com/doc',
+    'GitHub': 'https://docs.github.com',
+    'Postman': 'https://learning.postman.com/docs',
+    'VS Code': 'https://code.visualstudio.com/docs',
+};
 
 export async function generateMetadata({ params }) {
     const { projectId } = await params;
@@ -204,14 +237,22 @@ export default function ProjectDetail({ params }) {
                             <div>
                                 <h3 className="text-xl font-bold text-foreground mb-4">Technologies Used</h3>
                                 <div className="flex flex-wrap gap-2">
-                                    {project.technologies.map((tech, index) => (
-                                        <span
-                                            key={index}
-                                            className="px-4 py-2 bg-primary/10 border border-primary/30 text-primary rounded-lg text-sm font-semibold hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 cursor-default"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
+                                    {project.technologies.map((tech, index) => {
+                                        const href = techLinks[tech];
+                                        const Wrapper = href ? 'a' : 'span';
+                                        return (
+                                            <Wrapper
+                                                key={index}
+                                                {...(href ? { href, target: '_blank', rel: 'noopener noreferrer' } : {})}
+                                                className="group inline-flex items-center gap-1.5 px-4 py-2 bg-primary/10 border border-primary/30 text-primary rounded-lg text-sm font-semibold hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 cursor-pointer"
+                                            >
+                                                {tech}
+                                                {href && (
+                                                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 -mt-0.5" />
+                                                )}
+                                            </Wrapper>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
@@ -357,6 +398,55 @@ export default function ProjectDetail({ params }) {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
             </section>
+
+            {/* Prev / Next Project Navigation */}
+            {(() => {
+                const allProjects = projectsData;
+                const currentIndex = allProjects.findIndex((p) => p.id === project.id);
+                const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
+                const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
+                return (
+                    <section className="px-6 border-t border-border">
+                        <div className="max-w-4xl mx-auto">
+                            <div className={`grid gap-4 py-8 ${ prevProject && nextProject ? 'grid-cols-2' : 'grid-cols-1' }`}>
+                                {/* Previous */}
+                                {prevProject ? (
+                                    <Link
+                                        href={`/projects/${prevProject.id}`}
+                                        className="group flex items-center gap-4 p-5 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                                    >
+                                        <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 group-hover:-translate-x-1 transition-all duration-300">
+                                            <ChevronLeft className="w-5 h-5 text-primary" />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <p className="text-xs text-muted-foreground mb-0.5 uppercase tracking-wide font-medium">Previous</p>
+                                            <p className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-300 truncate">{prevProject.title}</p>
+                                            <p className="text-xs text-muted-foreground truncate">{prevProject.role}</p>
+                                        </div>
+                                    </Link>
+                                ) : <div />}
+
+                                {/* Next */}
+                                {nextProject ? (
+                                    <Link
+                                        href={`/projects/${nextProject.id}`}
+                                        className="group flex items-center gap-4 p-5 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 justify-end text-right"
+                                    >
+                                        <div className="min-w-0">
+                                            <p className="text-xs text-muted-foreground mb-0.5 uppercase tracking-wide font-medium">Next</p>
+                                            <p className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-300 truncate">{nextProject.title}</p>
+                                            <p className="text-xs text-muted-foreground truncate">{nextProject.role}</p>
+                                        </div>
+                                        <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 group-hover:translate-x-1 transition-all duration-300">
+                                            <ChevronRight className="w-5 h-5 text-primary" />
+                                        </div>
+                                    </Link>
+                                ) : <div />}
+                            </div>
+                        </div>
+                    </section>
+                );
+            })()}
 
             {/* Bottom CTA */}
             <section className="py-12 md:py-20 px-6 border-t border-border">
