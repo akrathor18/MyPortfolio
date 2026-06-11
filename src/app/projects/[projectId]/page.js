@@ -10,44 +10,64 @@ export function generateStaticParams() {
     }));
 }
 
+const SITE_URL = 'https://ashish-codes.web.app';
+
 export async function generateMetadata({ params }) {
     const { projectId } = await params;
-    const project = projectsData.find(
-        (p) => p.id === projectId
-    );
+    const project = projectsData.find((p) => p.id === projectId);
 
     if (!project) {
         return {
-            title: "Project Not Found | Ashish Codes",
-            description: "The project you are looking for does not exist.",
+            title: 'Project Not Found | Ashish Kumar',
+            description: 'The project you are looking for does not exist.',
         };
     }
 
+    // Keep title under 60 chars for Google
+    const title = `${project.title} | Ashish Kumar`;
+    const description = project.description; // concise, already short
+    const pageUrl = `${SITE_URL}/projects/${project.id}`;
+    const ogImage = `${SITE_URL}/og-image.png`; // always use the proper 1200x630 OG image
+
     return {
-        title: `${project.title} – ${project.description} | Ashish Codes`,
-        description: project.longDescription,
+        title,
+        description,
+        keywords: [
+            project.title,
+            ...project.technologies,
+            'Ashish Kumar',
+            'Full Stack Developer',
+            'Portfolio Project',
+        ],
         alternates: {
-            canonical: `https://ashish-codes.web.app/projects/${project.id}`,
+            canonical: pageUrl,
         },
         openGraph: {
-            title: `${project.title} – Ashish Codes`,
-            description: project.description,
-            url: `https://ashish-codes.web.app/projects/${project.id}`,
-            siteName: "Ashish Codes",
+            type: 'article',
+            url: pageUrl,
+            siteName: 'Ashish Kumar — Portfolio',
+            title,
+            description,
             images: [
                 {
-                    url: project.screenshots?.[0]?.image
-                        ? `https://ashish-codes.web.app${project.screenshots[0].image}`
-                        : "https://ashish-codes.web.app/favicon.png",
+                    url: ogImage,
                     width: 1200,
                     height: 630,
-                    alt: project.title,
+                    alt: `${project.title} — Ashish Kumar`,
                 },
             ],
-            type: "article",
+        },
+        twitter: {
+            card: 'summary_large_image',
+            site: '@iam_ashish_dev',
+            creator: '@iam_ashish_dev',
+            title,
+            description,
+            images: [ogImage],
         },
     };
 }
+
 export default function ProjectDetail({ params }) {
     const { projectId } = use(params);
     const project = projectsData.find(
