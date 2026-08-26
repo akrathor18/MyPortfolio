@@ -12,7 +12,7 @@ export default function sitemap() {
   ];
 
   const projectUrls = projectIds.map((id) => ({
-    url: `${SITE_URL}/projects/${id}`,
+    url: `${SITE_URL}/projects/${id}/`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.7,
@@ -24,12 +24,6 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1.0,
-    },
-    {
-      url: `${SITE_URL}/projects`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
     },
     ...projectUrls,
   ];
